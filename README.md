@@ -3,12 +3,12 @@ repositorio de sistemas inteligentes
 # LLM repositorio
 
 ## 1.Instalacion de ollama
-accedemos a la pagina de [ollama] (https://ollama.com/download/linux), en linux terminal y ejecutar el siguiente comando. 
+accedemos a la pagina de [ollama] (https://ollama.com/download/linux), en linux terminal y ejecutar el siguiente comando: 
 
 ````bash
 $ curl -fsSL https://ollama.com/install.sh | sh
 ````
-
+pagina de documentacion api [ollamaDoc](https://github.com/ollama/ollama/blob/main/docs/api.md)
 ## 2. Ejecutar el servidor
 Una vez instalado  se ejecuta el servidor con el siguiente comando:
 
@@ -33,11 +33,12 @@ curl -X POST http://localhost:11434/api/generate -d '{
   "prompt": "Why is the sky blue?"
 }'
 ````
-## 4.1. COnsulta a la API REST sin Stream
+## 4.1. Consulta a la API REST sin Stream
+-o es para exportar los datos recibidos
 ````bash
 curl -X POST http://localhost:11434/api/generate -d '{
   "model": "tinyllama",
   "prompt": "Why is the sky blue?",
   "stream": false
-}'
+}' -o salida2.md
 ````
