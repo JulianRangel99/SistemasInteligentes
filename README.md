@@ -59,5 +59,9 @@ curl "https://api.groq.com/openai/v1/chat/completions" \
          "model": "gemma-7b-it",
          "stream": false
        }'
-       ````
+````
   
+ ## 6 Levantar servidor 8080 con python
+````bash
+  python3 -m http.server 8080
+````
